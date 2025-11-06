@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 // Importar las 3 funciones
 const { getTradeHistory, buyCrypto, sellCrypto } = require('../controllers/tradeController');
-const auth = require('../middleware/authMiddleware'); // <-- Importar el vigilante
+const auth = require('../middleware/authMiddleware');
 
 // RF4 - Obtener historial de transacciones (Ruta Protegida)
 router.get('/history', auth, getTradeHistory);

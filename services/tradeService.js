@@ -8,7 +8,7 @@ class TradeService {
   static async buyCrypto(userId, simbolo, cantidad_usd) {
     const montoCompra = parseFloat(cantidad_usd);
     
-    // 1. Validar inputs (ahora lo hace el servicio)
+    // 1. Validar inputs básicos 
     if (!simbolo || !montoCompra || montoCompra <= 0) {
       throw new Error('Datos de compra inválidos');
     }

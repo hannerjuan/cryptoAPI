@@ -14,7 +14,6 @@ module.exports = function (req, res, next) {
   // 3. Verificar si el token es válido
   try {
     // 'Bearer TOKEN_AQUI'
-    // Quitamos 'Bearer ' para quedarnos solo con el token
     const bareToken = token.split(' ')[1]; 
     
     if (!bareToken) {

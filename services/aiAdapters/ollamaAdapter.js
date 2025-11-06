@@ -7,6 +7,7 @@ const OLLAMA_API_URL = 'http://localhost:11434/v1/chat/completions';
 class OllamaAdapter {
   constructor() {
     //url de conexión 
+    //se podria cambiar dependiendo de la configuración ADAPTER
     console.log("Ollama Adapter: Conectando a http://localhost:11434");
   }
 
@@ -18,6 +19,7 @@ class OllamaAdapter {
     try {
       //Creamos el "payload" que Ollama espera
       const payload = {
+        //se podria cambiar el modelo dependiendo de la configuración que se quiera usar
         model: "gemma3:4b", // <-- modelo descargado localmente
         messages: messages,
         max_tokens: 300,
